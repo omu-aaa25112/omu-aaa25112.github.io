@@ -23,10 +23,16 @@
     <label for="plus">足す</label>
     <input id="minus" type="radio" name="cal0" value="-">
     <label for="minus">引く</label>
-
+    <input id="multiply" type="radio" name="cal0" value="*">
+    <label for="multiply">掛ける</label>
+    <input id="divide" type="radio" name="cal0" value="/">
+    <label for="divide">割る</label>
+    
     <button onclick="result0.value =
         (cal0[0].checked)? Number(num01.value) + Number(num02.value) :
-        (cal0[1].checked)? Number(num01.value) - Number(num02.value) : NaN">計算</button>
+　　　　(cal0[1].checked)? Number(num01.value) - Number(num02.value) :
+    　　(cal0[2].checked)? Number(num01.value) * Number(num02.value) :
+    　　(cal0[3].checked)? Number(num01.value) / Number(num02.value) : NaN">計算</button>
 </form>
 
     <div>
