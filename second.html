@@ -13,6 +13,22 @@
     <p><label>BMI：<output name="bmi"></output></label></p>
 </form>
 
+<form onsubmit="return false">
+    <input type="number" id="num01"> 演算
+    <input type="number" id="num02"> =
+    <output for="num01 num02" id="result0"></output>
+
+    <!-- ラジオボタン選択肢 -->
+    <input id="plus" type="radio" name="cal0" value="+" checked>
+    <label for="plus">足す</label>
+    <input id="minus" type="radio" name="cal0" value="-">
+    <label for="minus">引く</label>
+
+    <button onclick="result0.value =
+        (cal0[0].checked)? Number(num01.value) + Number(num02.value) :
+        (cal0[1].checked)? Number(num01.value) - Number(num02.value) : NaN">計算</button>
+</form>
+
     <div>
         <h2>📝 おすすめの旅行先</h2>
         <p><strong>指示:</strong> 下記のHTMLコメント部分に、あなたのおすすめの旅行先を書いてください。</p>
